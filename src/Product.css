@@ -1,0 +1,31 @@
+.product{
+    height: 550px;
+    width: 500px;
+    color:black;
+    background-color: white;
+    margin: 20px;
+    padding: 10px;
+}
+.product-rating{
+    display: flex;
+}
+.product-img{
+    height: 60%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.product-button{
+    margin: 5px 180px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.product-button:hover{
+    background-color: white;
+    color: black;
+    border: 3px solid black;
+}

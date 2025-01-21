@@ -1,0 +1,31 @@
+.home-prod {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 10px;
+    background-color: aliceblue;
+  }
+  
+  .homepage-img{
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr 1fr;  /* For smaller screens, switch to 2 columns */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      grid-template-columns: 1fr;  /* For very small screens, switch to 1 column */
+    }
+  }
+  
+.homeimg{
+    height: 500px;
+    width: 90%;
+    object-fit: fill;
+}
