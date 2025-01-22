@@ -1,16 +1,36 @@
-body {
-  margin: 0;
-  font-family: "Amazon Ember",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: black;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+/* Responsive Design */
 .App{
   height: 100%;
   width: 100%;
+}
+/* For Tablets */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .product-card {
+    width: 100%;
+    margin: 10px;
+  }
+}
+
+/* For Mobile Devices */
+@media (max-width: 480px) {
+  .navbar {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .product-card img {
+    width: 100%;
+    height: auto;
+  }
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
 }

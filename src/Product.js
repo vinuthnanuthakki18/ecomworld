@@ -27,7 +27,7 @@ function Product({id,name,desc,price,rating,imgurl}) {
   console.log("basket",state.basket);
   
   return (
-    <div className='product'>
+          <div className='product'>
       <div className="product-info">
         <p><strong>{desc}</strong></p>
         <p className="product-price">
@@ -41,6 +41,7 @@ function Product({id,name,desc,price,rating,imgurl}) {
       <img src={imgurl} alt={name} className='product-img'/>
       <button onClick={addonbasket} className='product-button'>Add to basket</button>
     </div>
+
   )
 }
 

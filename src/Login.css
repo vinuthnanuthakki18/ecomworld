@@ -1,52 +1,143 @@
-.login-page{
+/* Main login page styles */
+.login-page {
     background-color: rgb(243, 191, 113);
-    height: 700px;
-    width: 1575px;
+    height: 100vh;  /* Full height */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;  /* Center items vertically */
+    padding: 20px;
 }
 
-.header__logo{
+/* Logo styling */
+.header__logo {
     display: flex;
-    height: 100px;
-    width: 100%;
     justify-content: center;
+    margin-bottom: 20px;  /* Add margin to space logo and form */
 }
 
-.logo-login{
-    height: 100px;
-    width: 200px;
+.logo-login {
+    height: 80px;  /* Adjust logo size */
+    width: auto;  /* Maintain aspect ratio */
 }
 
-.login__container{
-    background-color: rgba(255, 255, 255, 0.578);
-    height: 500px;
-    width: 400px;
+/* Login container styling */
+.login__container {
+    background-color: rgba(255, 255, 255, 0.8);  /* Slightly more opaque background */
+    width: 100%;
+    max-width: 400px;  /* Limit the width to a max of 400px */
+    padding: 20px;
+    border-radius: 10px;  /* Rounded corners for modern look */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);  /* Soft shadow around the form */
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px;
-    border-radius: 15px;
 }
 
+/* Form element styling */
 .login__container form {
     display: flex;
-    flex-direction: column;  /* Stack the form elements vertically */
+    flex-direction: column;
     width: 100%;
-    gap: 10px;               /* Optional: Adds space between elements */
+    gap: 15px;  /* Adds space between form fields */
 }
 
-.login__container form h5{
-    margin: 10px;
+.login__container form h5 {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 600;  /* Make label text slightly bolder */
 }
 
-.login__container form button{
-    margin-top: 20px;
-    border-radius: 15px;
-}
-
+/* Input fields styling */
 .input-email, .input-password {
-    padding: 10px;
-    border-radius: 15px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    width: 100%;
+}
+
+.input-email:focus, .input-password:focus {
+    border: 1px solid #f8a500;  /* Highlight border on focus */
+    outline: none;
+}
+
+/* Button styling */
+button {
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Sign In Button */
+.login {
+    background-color: #f8a500;
+    color: white;
+    border: none;
+    margin-top: 15px;
+}
+
+.login:hover {
+    background-color: #f69300;
+}
+
+/* Create Account Button */
+.signup {
+    background-color: #fff;
+    color: #f8a500;
+    border: 1px solid #f8a500;
+    margin-top: 20px;
+}
+
+.signup:hover {
+    background-color: #f8a500;
+    color: white;
+}
+
+/* Terms and Conditions Text */
+p {
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: center;
+    color: #555;
+}
+
+/* Responsive Design for Tablets and Smaller Devices */
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .logo-login {
+        height: 70px;  /* Reduce logo size for smaller screens */
+    }
+
+    .login__container {
+        width: 90%;  /* Take up 90% of the screen width */
+        max-width: 350px;  /* Max width for form */
+    }
+
+    .input-email, .input-password, .login, .signup {
+        padding: 10px;  /* Reduce padding on inputs and buttons */
+    }
+
+    button {
+        font-size: 14px;  /* Reduce font size for smaller buttons */
+    }
+
+    p {
+        font-size: 12px;  /* Smaller text size for mobile devices */
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .logo-login {
+        height: 80px;
+    }
+
+    .login__container {
+        width: 80%;  /* Adjust container size for tablets */
+        max-width: 400px;
+    }
 }

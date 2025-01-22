@@ -8,7 +8,7 @@ import './Header.css';
 import { useStateValue } from './StateProvider';
 import AddressSelection from './AddressSelection'; // Import AddressSelection component
 
-function Header() {
+function Header({ setSearchQuery } ) {
   const [{ basket }] = useStateValue();
   const [isAddressModalOpen, setIsAddressModalOpen] = useState(false); // State to control modal visibility
   const [selectedAddress, setSelectedAddress] = useState({ id: 1, name: 'Nuthakki Vinuthna', city: 'Vijayawada', pincode: '522502' },
@@ -47,7 +47,7 @@ function Header() {
         </div>
       </div>
       <div className="header__search">
-        <input className="head__search_type" placeholder="Search" />
+        <input className="head__search_type" placeholder="Search" onChange={(e) => setSearchQuery(e.target.value)}/>
         <div className="search_icon_div">
           <SearchIcon fontSize="large" className="search-icon" />
         </div>

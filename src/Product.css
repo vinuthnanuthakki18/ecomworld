@@ -1,31 +1,66 @@
-.product{
-    height: 550px;
-    width: 500px;
-    color:black;
-    background-color: white;
-    margin: 20px;
-    padding: 10px;
-}
+
 .product-rating{
     display: flex;
 }
-.product-img{
-    height: 60%;
-    width: 100%;
-    object-fit: fill;
+
+
+.product {
+  height: 350px; /* Keep fixed height for uniform product sizes */
+  width: 100%; /* Make width flexible, allowing it to take full available space */
+  max-width: 350px; /* Limit max width to maintain consistency */
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Space between elements inside product */
+  box-sizing: border-box;
 }
 
-.product-button{
-    margin: 5px 180px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: black;
-    color: white;
-    cursor: pointer;
+/* For product image */
+.product-img {
+  width: 80%; /* Keeps the product image at 80% of the width */
+  height: 40%; /* 40% height of the product container */
+  object-fit: contain; /* Maintain aspect ratio without distortion */
 }
 
-.product-button:hover{
-    background-color: white;
-    color: black;
-    border: 3px solid black;
+/* Adjust button style */
+.product-button {
+  width: 120px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+}
+
+.product-button:hover {
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+}
+
+/* Responsive for tablets */
+@media (max-width: 768px) {
+  .product {
+    width: 100%; /* Make product full width on tablets */
+    max-width: none; /* Remove width restriction */
+  }
+
+  .product-img {
+    height: 120px; /* Smaller image size */
+  }
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 480px) {
+  .product {
+    width: 100%; /* Make product full width on mobile */
+    margin: 10px 0; /* Space between product items */
+  }
+
+  .product-img {
+    height: auto; /* Adjust image height to maintain aspect ratio */
+  }
 }
